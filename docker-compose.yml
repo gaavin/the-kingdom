@@ -1,4 +1,4 @@
-version: "3"
+version: "3.8"
 
 services:
   the-kingdom:
@@ -9,7 +9,7 @@ services:
     stdin_open: true
     restart: unless-stopped
     volumes:
-      - ./the-kingdom-data:/data:Z
+      - ./the-kingdom/data:/data:Z
     environment:
       EULA: TRUE
       OVERRIDE_SERVER_PROPERTIES: TRUE
