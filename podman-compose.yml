@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   the-kingdom:
+    container_name: the-kingdom
     image: itzg/minecraft-server
     ports:
       - 25565:25565
@@ -9,7 +10,7 @@ services:
     stdin_open: true
     restart: unless-stopped
     volumes:
-      - ./the-kingdom/data:/data:Z
+      - ./the-kingdom:/data:Z
     environment:
       EULA: TRUE
       OVERRIDE_SERVER_PROPERTIES: TRUE
@@ -22,4 +23,3 @@ services:
       PVP: TRUE
       LEVEL_TYPE: DEFAULT
       LEVEL: world
-
