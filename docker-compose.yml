@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  the-kingdom:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    volumes:
+      - ./the-kingdom-data:/data:Z
+    environment:
+      EULA: TRUE
+      OVERRIDE_SERVER_PROPERTIES: TRUE
+      VERSION: 1.20.4
+      TYPE: FABRIC
+      MEMORY: 20G
+      MOTD: §l§nThe Kingdom
+      DIFFICULTY: NORMAL
+      MAX_PLAYERS: 100
+      PVP: TRUE
+      LEVEL_TYPE: DEFAULT
+      LEVEL: world
+
